@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/IMG_2223.JPG" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Designer</p>
+                <h1>Hi, I'm <span>Danmi</span><br>From Achievers</h1>
+                 
+            </div>
+        </div>
+    </div>
+    <!-----------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+              <div class="about-col-1">
+                <img src="img/IMG_1679.JPG">
+              </div>
+              <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My Name is Adeyemi Adedamola Ayomide From Ogun State Nigeria I Reside In Egbeda 
+                   Lagos State A Bonifide Student Of Achievers University Owo Department of Computer Science
+                   300 Level I Am A Front-End Website Developer. I Also Help Make Responsive Beautiful Websites
+                   For Various Clients According To Their Choice.
+                </p>
+
+               <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Wordpress</span><br>Designing Website Interfaces</li>
+                    <li><span>Web Development</span><br>Web App Development</li>
+                    <li><span>Github</span><br>Building Blog Websites</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="Experience">
+                <ul>
+                    <li><span>2022 - Current</span><br>Html/Css Training At Larry Computer Academy</li>
+                    <li><span>2022 - Current</span><br>Github Training At Larry Computer Academy</li>
+                    <li><span>2022 - Current</span><br>Wordpress Training At Larry Computer Academy</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>2021</span><br>Achivers University Owo</li>
+                    <li><span>2019</span><br>University Of Ilorin</li>
+                    <li><span>2018</span><br>Baptist Boys High School</li>
+                </ul>
+               </div>                          
+             </div>  
+            </div>
+        </div>
+
+    </div>
+    <!-----------services------------>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-tiltle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I can design front-end websites professionally according to clients request.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>Wordpress Design</h2>
+                    <p>I can design E-commerce websites and Blog websites using wordpress and it's themes.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>WebApp Design</h2>
+                    <p>I can design websites applications for small organisations and private companies. </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------portfolio------------------------------------>
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-tiltle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/work-1.png">
+                    <div class="layer">
+                        <!---------comment
+                        <h3>Social Media App</h3>
+                        <p>The app Connects you to the talented people around the world.
+                        Download it from play store.</p>------->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-2.png">
+                </div>
+                <div class="work">
+                    <img src="img/work-3.png">
+                </div>
+
+            </div>
+
+        </div>
+     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
